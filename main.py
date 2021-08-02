@@ -1,3 +1,7 @@
+# Computación Gráfica, Visión Computacional y Multimedia
+#   @author: Carlos Alberto Mestas Escarcena
+#   @author: David Jose Peña Ugarte
+
 import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.svm import SVC
@@ -93,7 +97,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42,
     stratify=y)
 
-paramGrid = {'C': [1,10,100, 1000],
+paramGrid = {'C': [1, 10, 100, 1000],
              'gamma': [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1, ], }
 estimator = GridSearchCV(
     estimator=SVC(kernel="rbf"),
